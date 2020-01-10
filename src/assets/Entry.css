@@ -1,0 +1,96 @@
+.entry {
+    display: block;
+    position: relative;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    margin: 1px 5px;
+    padding: 15px;
+    font-size: 1.15em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.entryChecked {
+    background-color: #b5c6e9;
+}
+
+.entryCheckedSubmitted {
+    background-color: #c4ffc4;
+}
+
+.entry:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+.entryChecked:hover {
+    background-color: #b5c6e9;
+}  
+
+.entryCheckedSubmitted:hover {
+    background-color: #c4ffc4;
+}
+
+.entryNotCheckedAndSubmitted {
+    cursor: default;
+    background-color: #c0c0c0;
+    opacity: 0.9;
+}
+
+.entryNotCheckedAndSubmitted:hover {
+    background-color: #c0c0c0;
+}
+
+.entry svg {
+    display: none;
+}
+
+
+.voteLabel {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.voteSubmitButton {
+    margin: 5px 0;
+}
+
+.entryInfo {
+    text-align: left;
+    margin: -1em;
+    padding: 5px 15px;
+}
+
+.voteMePanel {
+    /* position: relative;
+    top: 50%; */
+    /* padding: 50% 0; */
+    /* padding-left: 15px; */
+    display: block;
+    padding: 45% 45%;
+    max-height: 1em;
+    text-align: center;
+    align-items: baseline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    color: #282c34;
+}
+
+.voteMePanel svg {
+    display: block;
+    font-size: 2em;
+}
+
+
+
+/**************** Customized Material UI Components *********************/
+.fclRoot {
+    cursor: pointer;
+    display: block;
+    align-items: center;
+    margin-left: -11px;
+    margin-right: 16px;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+}
