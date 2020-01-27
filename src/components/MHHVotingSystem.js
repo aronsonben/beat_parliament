@@ -5,6 +5,7 @@ import '../App.css';
 import PreviousWinner from './PreviousWinner'
 import VotingForm from './VotingForm'
 import SubmitConfirmation from './SubmitConfirmation';
+import votingService from '../services/votingService';
 
 class MHHVotingSystem extends React.Component {
   constructor(props) {
@@ -35,18 +36,21 @@ class MHHVotingSystem extends React.Component {
     });
   }
 
-  handleVoteSubmit() {
+  async handleVoteSubmit() {
     if(this.state.selectedVote === '') {
       console.log("Must select entry to vote")
       // Eventually set something to true in order to render failed form submit
     } else {
-      console.log("")
       this.setState({
         submittedVote: this.state.selectedVote,
         submitted: true
       });
     }
+    let res = await votingService.submitVote();
+    console.log(res);
   }
+
+
 
   render() {
     return (
@@ -62,7 +66,7 @@ class MHHVotingSystem extends React.Component {
               selectedVote={this.state.selectedVote}
               handleSelectedVoteChange={this.handleSelectedVoteChange}
               handleSubmit={this.handleVoteSubmit}
-             />
+            />
           </div>
           <button onClick={() => console.log(this.state)}>Print state</button>
           <button onClick={this.resetState}>Reset state</button>

@@ -2,13 +2,5 @@
 
 App for reddit's r/makinghiphop community to vote on the best tracks of the week. 
 
-
-### Notes to self
-
-Using this tutorial to help me get backend set up: https://dev.to/pacheco/my-fullstack-setup-node-js-react-js-and-mongodb-2a4k
-
-
-Might want to look into this more if I'm going to use it: https://www.npmjs.com/package/http-proxy-middleware#working-examples
-
-
-Example of how I can set up my express routes: https://github.com/expressjs/express/blob/4.13.1/examples/route-separation/index.js#L32-L47
+## To run Development environment
+Simply run `npm run dev` to start the development environment. This will start the node.js server using nodemon and start the react app using create-react-app's react-scripts.
