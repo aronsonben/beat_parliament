@@ -49,9 +49,20 @@ class SubmitEntryForm extends React.Component {
     }
   }
 
+  async dropAll(evt) {
+    if(evt.target.innerText !== 'are you sure?') {
+      evt.target.innerText = 'are you sure?';
+      evt.target.style.backgroundColor = 'red';
+    } else {
+      let res = await votingService.dropColls();
+      console.log(res);
+    }
+  }
+
   render() {
     return(
       <div>
+        <button onClick={this.dropAll}>drop collections</button>
         <h2>Submit Entry</h2>
         <form className="App" onSubmit={this.handleEntrySubmission}>
           <FormControl className="entrySubmissionControl" fullWidth={false}>

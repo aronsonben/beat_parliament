@@ -3,26 +3,21 @@ const {Schema} = mongoose;
 
 const entrySchema = new Schema({
     _id: String,
+    name: String,
     contest: String,
+    votes: Number,
     artist: {
         _id: String,
         name: String,
-        wins: Number,
-        active: Boolean,
-        tracks: [
-            {
-                _id: String,
-                title: String,
-                link: String,
-                active: Boolean,
-                submitted: Date
-            }
-        ]
-    },
-    votes: Number, 
+        track: {
+            _id: String,
+            title: String,
+            link: String,
+        }
+    }, 
     active: Boolean,
     winner: Boolean,
     date_submitted: Date
 });
 
-mongoose.model('entries', entrySchema);
+mongoose.model('Entries', entrySchema);

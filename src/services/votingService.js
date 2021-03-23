@@ -16,5 +16,12 @@ export default {
       }
     });
     return res.data || [];
+  },
+  dropColls: async () => {
+    let res = await axios({
+    method: 'post',
+    url: '/drop'
+  });
+  return res.data || "fail";
   }
 }
